@@ -24,7 +24,7 @@ describe(@"FISViewController", ^{
         
         Swizzlean *swizzle = [[Swizzlean alloc] initWithClassToSwizzle:[FISViewController class]];
         [swizzle swizzleInstanceMethod:@selector(fruitsArray) withReplacementImplementation:^NSArray *(id _self) {
-            NSLog(@"ASDF");
+
             return @[@"Apple",@"Banana"];
         }];
         
