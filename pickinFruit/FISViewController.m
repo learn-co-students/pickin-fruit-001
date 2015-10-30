@@ -21,7 +21,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    self.fruitsArray = @[@"Apple",@"Orange",@"Banana",@"Pear",@"Grape", @"Kiwi", @"Mango", @"Blueberry", @"Raspberry"];
+    self.fruitsArray = @[@"Apple",
+                         @"Orange",
+                         @"Banana",
+                         @"Pear",
+                         @"Grape",
+                         @"Kiwi",
+                         @"Mango",
+                         @"Blueberry",
+                         @"Raspberry"];
 }
 
 - (void)didReceiveMemoryWarning
