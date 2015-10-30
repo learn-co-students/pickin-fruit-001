@@ -1,7 +1,4 @@
----
-tags: pickerview, delegate, protocol
-languages: objc
----
+
 
 # Pickin' Fruit
 

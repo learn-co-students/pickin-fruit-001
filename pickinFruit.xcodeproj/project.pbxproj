@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		313CE52019CA25D600255879 /* FISViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 313CE51F19CA25D600255879 /* FISViewControllerSpec.m */; };
+		5BC3073D1BE153CB0069EF81 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC3073C1BE153CB0069EF81 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		D83147A9196584DB00264D9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83147A8196584DB00264D9C /* Foundation.framework */; };
 		D83147AB196584DB00264D9C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83147AA196584DB00264D9C /* CoreGraphics.framework */; };
 		D83147AD196584DB00264D9C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83147AC196584DB00264D9C /* UIKit.framework */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		2AB06822039845CC91DE62CB /* libPods-pickinFruitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pickinFruitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		313CE51F19CA25D600255879 /* FISViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISViewControllerSpec.m; sourceTree = "<group>"; };
+		5BC3073C1BE153CB0069EF81 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A61ED086550D3C296F08769E /* Pods-pickinFruitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pickinFruitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pickinFruitTests/Pods-pickinFruitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D83147A5196584DB00264D9C /* pickinFruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pickinFruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83147A8196584DB00264D9C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -128,6 +130,7 @@
 		D83147AE196584DB00264D9C /* pickinFruit */ = {
 			isa = PBXGroup;
 			children = (
+				5BC3073C1BE153CB0069EF81 /* Launch Screen.storyboard */,
 				D83147B7196584DB00264D9C /* FISAppDelegate.h */,
 				D83147B8196584DB00264D9C /* FISAppDelegate.m */,
 				D83147BA196584DB00264D9C /* Main.storyboard */,
@@ -197,6 +200,7 @@
 				D83147C3196584DB00264D9C /* Frameworks */,
 				D83147C4196584DB00264D9C /* Resources */,
 				7F33E47D07B041E899079C13 /* Copy Pods Resources */,
+				E57236C2D8317599B9B912F6 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +253,7 @@
 			files = (
 				D83147C1196584DB00264D9C /* Images.xcassets in Resources */,
 				D83147B3196584DB00264D9C /* InfoPlist.strings in Resources */,
+				5BC3073D1BE153CB0069EF81 /* Launch Screen.storyboard in Resources */,
 				D83147BC196584DB00264D9C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +282,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pickinFruitTests/Pods-pickinFruitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E57236C2D8317599B9B912F6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pickinFruitTests/Pods-pickinFruitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6ABBFDFCEB0480A820728AC /* Check Pods Manifest.lock */ = {
@@ -385,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -417,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -427,10 +447,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pickinFruit/pickinFruit-Prefix.pch";
 				INFOPLIST_FILE = "pickinFruit/pickinFruit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -440,10 +460,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pickinFruit/pickinFruit-Prefix.pch";
 				INFOPLIST_FILE = "pickinFruit/pickinFruit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
