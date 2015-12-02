@@ -12,3 +12,5 @@ Let's make a slot machine!
      - *Here, have some emoji:* 🍎🍇🍉🍊🍀💎 
   4. When the spin button is pressed, use the `selectRow:inComponent:animated:` to randomly spin each component to a row.
   5. When the animations finish, display a `UIAlertController` that says whether you won (i.e., all three components have the same value) or lost. There should be two buttons: `Cancel` and `Spin Again`. These should do reasonable things.
+
+<a href='https://learn.co/lessons/pickin-fruit' data-visibility='hidden'>View this lesson on Learn.co</a>
