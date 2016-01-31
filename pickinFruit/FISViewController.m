@@ -66,7 +66,7 @@
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){}];
     UIAlertAction *spinAgain = [UIAlertAction actionWithTitle:@"SpinAgain" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){[self spin:self.fruitPicker];}];
     [alertCont addAction:cancel];
-    [alertCont addAction:cancel];
+    [alertCont addAction:spinAgain];
     
     [self presentViewController:alertCont animated:YES completion:nil];
 
