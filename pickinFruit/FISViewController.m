@@ -8,7 +8,7 @@
 
 #import "FISViewController.h"
 
-@interface FISViewController ()
+@interface FISViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
 
 - (IBAction)spin:(id)sender;
 
@@ -30,6 +30,9 @@
                          @"Mango",
                          @"Blueberry",
                          @"Raspberry"];
+    
+    self.fruitPicker.delegate = self;
+    self.fruitPicker.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,7 +43,52 @@
 
 
 - (IBAction)spin:(id)sender {
+    
+    
+    
+    [self.fruitPicker selectRow:[self randomRow] inComponent:0 animated:YES];
+    [self.fruitPicker selectRow:[self randomRow] inComponent:1 animated:YES];
+    [self.fruitPicker selectRow:[self randomRow] inComponent:2 animated:YES];
+    
+    
+    NSString *firstComponentString = self.fruitsArray[[self.fruitPicker selectedRowInComponent:0]];
+    NSString *secondComponentString = self.fruitsArray[[self.fruitPicker selectedRowInComponent:1]];
+    NSString *thirdComponentString = self.fruitsArray[[self.fruitPicker selectedRowInComponent:2]];
+    
+    NSString *result = @"You lost!";
+    
+    if ([firstComponentString isEqualToString:secondComponentString] && [secondComponentString isEqualToString:thirdComponentString]) {
+        result = @"You won!";
+    }
+    
+    UIAlertController *alertCont = [UIAlertController alertControllerWithTitle:@"Result" message:result preferredStyle:UIAlertControllerStyleAlert];
 
-#warning Implement this method!
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){}];
+    UIAlertAction *spinAgain = [UIAlertAction actionWithTitle:@"SpinAgain" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){[self spin:self.fruitPicker];}];
+    [alertCont addAction:cancel];
+    [alertCont addAction:spinAgain];
+    
+    [self presentViewController:alertCont animated:YES completion:nil];
+
+}
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    
+    return 3;
+}
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    
+    return 6;
+}
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    
+    return self.fruitsArray[row];
+}
+
+-(NSInteger)randomRow{
+    return arc4random() % [self.fruitsArray count];
+    
 }
 @end
